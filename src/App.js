@@ -33,6 +33,14 @@ class App extends Component {
           </ol>
           <h4>3.2 Maps</h4>
           <div className="responsive-div" />
+          <h3>4. Content blocks</h3>
+          <div className="message--subtle">
+            <p>A very subtle message</p>
+          </div>
+          <div className="message--actionable">
+            <p>A not so subtle message</p>
+            <button>call to action</button>
+          </div>
         </div>
       </div>
     );

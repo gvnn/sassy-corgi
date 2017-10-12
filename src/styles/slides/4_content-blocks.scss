@@ -1,0 +1,28 @@
+@mixin message($class) {
+  .message--#{$class} {
+    border: 1px dotted black;
+    color: black;
+    margin: 20px;
+    padding: 10px;
+    @content;
+  }
+}
+
+@include message("subtle") {
+  margin: 1em;
+}
+
+@include message("actionable") {
+  color: red;
+  height: 3em;
+  p {
+    float: left;
+  }
+  button {
+    // actionable messages may contain buttons for taking action!
+    float: right;
+    background-color: blue;
+    color: white;
+    padding: 1em;
+  }
+}
