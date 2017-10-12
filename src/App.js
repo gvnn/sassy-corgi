@@ -55,6 +55,15 @@ class App extends Component {
               mollit anim id est laborum."
             </p>
           </article>
+          <h3>7. Extending selectors</h3>
+          <div className="animal">animal</div>
+          <div className="dog">dog</div>
+          <div className="cat">cat</div>
+          <div className="giraffe">giraffe</div>
+          <div className="lion">lion</div>
+          <div className="join-actions">
+            <button className="join-button">Join!</button>
+          </div>
         </div>
       </div>
     );

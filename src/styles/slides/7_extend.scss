@@ -1,0 +1,64 @@
+@mixin animal() {
+  background: gray;
+  border: 1px solid red;
+  font-weight: bold;
+  font-size: 50px;
+  color: red;
+  padding: 20px;
+}
+.animal {
+  @include animal;
+}
+.cat {
+  @extend .animal;
+  color: white;
+}
+.dog {
+  @extend .animal;
+  color: black;
+}
+
+// Notice in the compiled how only the last property (color) is different, the rest is the same.
+// With a mixin, as we define more types of animals,
+// the amount of repeated style properties in the CSS output keeps growing
+
+// Placeholder selectors
+
+%animal {
+  @include animal;
+}
+// Because %animal is just a placeholder selector, it's disappeared from the output
+
+.giraffe {
+  @extend %animal;
+  color: yellow;
+}
+.lion {
+  @extend %animal;
+  color: orange;
+}
+
+// Selector multiple inheritance
+%mfw-standing-out {
+  font-size: 150%;
+  font-style: italic;
+  padding: 25px;
+}
+%mfw-slightly-shadowed {
+  box-shadow: black 2px 2px 10px;
+}
+%mfw-rounded {
+  border-radius: 25px;
+}
+
+// in the application files:
+.join-actions {
+  padding-top: 1em;
+}
+.join-button {
+  @extend %mfw-standing-out;
+  @extend %mfw-slightly-shadowed;
+  @extend %mfw-rounded;
+  background: green;
+  color: white;
+}
