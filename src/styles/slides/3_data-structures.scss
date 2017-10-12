@@ -1,0 +1,45 @@
+// lists
+$colors: ("red", "green", "purple", "pink");
+
+// Indexes start at 1, not 0 :'(
+.color--1 {
+  color: unquote(nth($list: $colors, $n: 1));
+}
+
+.color--2 {
+  color: unquote(nth($list: $colors, $n: 2));
+}
+
+.color--3 {
+  color: unquote(nth($list: $colors, $n: 3));
+}
+
+.color--4 {
+  color: unquote(nth($list: $colors, $n: 4));
+}
+
+// map
+$breakpoints: (small: 767px, medium: 992px, large: 1200px);
+
+@mixin respond-to($breakpoint) {
+  @media (min-width: #{map-get($breakpoints, $breakpoint)}) {
+    @content; // <- Content block arguments for mixins
+  }
+}
+
+.responsive-div {
+  width: 100%;
+  height: 10em;
+  background-color: red;
+  @include respond-to(small) {
+    width: 100%;
+  }
+  @include respond-to(medium) {
+    width: 75%;
+    background-color: green;
+  }
+  @include respond-to(large) {
+    width: 50%;
+    background-color: blue;
+  }
+}

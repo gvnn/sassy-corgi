@@ -19,10 +19,20 @@ class App extends Component {
             <a onClick={this.handlePrefixChange}>I'm a link that should be red but with a "blue" body I change</a>
           </p>
           <h3>2. Variable defaults</h3>
-          <p className='message'>
+          <p className="message">
             A message to you, Rudy<br />
             A message to you
           </p>
+          <h3>3. Data structures</h3>
+          <h4>3.1 Lists</h4>
+          <ol>
+            <li className="color--1">somewhere</li>
+            <li className="color--2">over</li>
+            <li className="color--3">the</li>
+            <li className="color--4">rainbow</li>
+          </ol>
+          <h4>3.2 Maps</h4>
+          <div className="responsive-div" />
         </div>
       </div>
     );
