@@ -17,6 +17,7 @@
   height: 3em;
   p {
     float: left;
+    animation: blinker 1s linear infinite;
   }
   button {
     // actionable messages may contain buttons for taking action!
@@ -24,5 +25,11 @@
     background-color: blue;
     color: white;
     padding: 1em;
+  }
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
   }
 }

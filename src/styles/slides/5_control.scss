@@ -1,0 +1,43 @@
+$debug: true !default; // <- change in screen
+
+.article {
+  color: black;
+
+  @if ($debug) {
+    // visualizing layout internals
+    border: 1px dotted red;
+    @warn ("debug!!"); // <- launch npm run build-css to test
+  }
+}
+
+$properties: (margin, padding);
+@mixin set-value($side, $value) {
+  @each $prop in $properties {
+    #{$prop}-#{$side}: $value; // <- Interpolation
+  }
+}
+.box {
+  @include set-value(top, 4em);
+  background-color: green;
+  width: 4em;
+  display: block;
+}
+
+$i: 6;
+@while $i > 0 {
+  .item-#{$i} {
+    width: 2em * $i;
+    height: 2em * $i;
+    margin-top: 1em;
+    background-color: blue;
+    position: relative;
+    &:before {
+      content: "#{$i}";
+      line-height: 2em * $i;
+      display: inline-block;
+      text-align: center;
+      display: block;
+    }
+  }
+  $i: $i - 1;
+}

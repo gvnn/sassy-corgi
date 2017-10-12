@@ -41,6 +41,10 @@ class App extends Component {
             <p>A not so subtle message</p>
             <button>call to action</button>
           </div>
+          <h3>5. Control directives</h3>
+          <div className="article">Is it debugging?</div>
+          <div className="box" />
+          {[...Array(6)].map((x, i) => <div className={`item-${i+1}`} key={i} />)}
         </div>
       </div>
     );
