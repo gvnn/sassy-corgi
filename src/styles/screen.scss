@@ -2,24 +2,34 @@
 
 $debug: false;
 
+@import "./slides/1_prefixing.scss";
+
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
 }
 
-.App {
-  text-align: center;
-  &-logo {
+a {
+  cursor: pointer;
+}
+
+.application {
+  &__logo {
     height: 80px;
   }
-  &-header {
+  &__header {
+    text-align: center;
     background-color: #222;
     height: 150px;
     padding: 20px;
     color: white;
   }
-  &-title {
+  &__title {
     font-size: 1.5em;
   }
+}
+
+.content {
+  padding: 1em;
 }

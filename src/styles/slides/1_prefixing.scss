@@ -1,0 +1,13 @@
+a {
+  &:hover {
+    color: red;
+  }
+}
+
+a {
+  &:hover {
+    body.blue & {
+      color: blue;
+    }
+  }
+}
