@@ -18,6 +18,11 @@ class App extends Component {
           <p>
             <a onClick={this.handlePrefixChange}>I'm a link that should be red but with a "blue" body I change</a>
           </p>
+          <h3>2. Variable defaults</h3>
+          <p className='message'>
+            A message to you, Rudy<br />
+            A message to you
+          </p>
         </div>
       </div>
     );

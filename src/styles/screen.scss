@@ -1,8 +1,10 @@
 @charset 'utf-8';
 
 $debug: false;
+// $message-color: black;
 
 @import "./slides/1_prefixing.scss";
+@import "./slides/2_default.scss";
 
 body {
   margin: 0;
